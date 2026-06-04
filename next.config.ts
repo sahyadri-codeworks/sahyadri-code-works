@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: "/sahyadri-code-works",
-  assetPrefix: "/sahyadri-code-works/",
+  basePath: isProd ? "/sahyadri-code-works" : "",
+  assetPrefix: isProd ? "/sahyadri-code-works/" : "",
 };
 
 export default nextConfig;
