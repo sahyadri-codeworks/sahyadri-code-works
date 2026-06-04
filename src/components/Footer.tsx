@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 lg:col-span-2 lg:pr-8">
             <Link href="/" className="flex items-center gap-4 w-fit group">
               <div className="bg-white rounded-xl flex items-center justify-center p-2 shadow-sm shrink-0 w-20 h-16 md:w-24 md:h-20 overflow-hidden relative">
-                <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-cover object-top absolute top-2 w-[90%] h-auto" />
+                <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-cover object-top absolute top-2 w-[90%] h-auto" loading="eager" priority />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-black text-white tracking-[0.15em] leading-none group-hover:text-[#F18430] transition-colors">SAHYADRI</span>
