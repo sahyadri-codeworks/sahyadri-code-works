@@ -88,8 +88,9 @@ export default function Home() {
             {/* Left Content */}
             <div className="max-w-2xl">
               <FadeIn direction="up">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#FFF5EF] border border-[#F4DCCB] text-[#E86A1F] text-xs font-mono mb-8 shadow-sm">
-                  <span className="text-muted-foreground/50">$</span> npx sahyadri-code-works --launch
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF5EF] border border-[#F4DCCB] text-[#E86A1F] text-sm font-medium mb-8 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-[#E86A1F]"></span>
+                  Rooted in Maharashtra · Sahyadri Code Works
                 </div>
               </FadeIn>
 
