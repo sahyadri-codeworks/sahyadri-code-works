@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, Home, Briefcase, Box, Info, FolderGit2, GraduationCap, PhoneCall, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,20 +16,21 @@ import { useModal } from "@/components/providers/ModalProvider";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const navigation = [
-  { key: "nav.home", href: "/" },
-  { key: "nav.services", href: "/services" },
+  { key: "nav.home", href: "/", icon: Home },
+  { key: "nav.services", href: "/services", icon: Briefcase },
   { 
     key: "nav.products", 
     label: "Products", 
+    icon: Box,
     dropdown: [
-      { label: "Projanix (AI Project Hub)", href: "/products/projanix" },
-      { label: "All Products →", href: "/products" }
+      { label: "Projanix (AI Project Hub)", href: "/products/projanix", icon: Sparkles },
+      { label: "All Products", href: "/products", icon: Box }
     ]
   },
-  { key: "nav.about", href: "/about" },
-  { key: "nav.projects", href: "/projects" },
-  { key: "nav.careers", href: "/careers" },
-  { key: "nav.contact", href: "/contact" },
+  { key: "nav.about", href: "/about", icon: Info },
+  { key: "nav.projects", href: "/projects", icon: FolderGit2 },
+  { key: "nav.careers", href: "/careers", icon: GraduationCap },
+  { key: "nav.contact", href: "/contact", icon: PhoneCall },
 ];
 
 export default function Navbar() {
@@ -59,7 +60,7 @@ export default function Navbar() {
       <div className="container flex h-[120px] max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/sahyadri-code-works/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" priority />
+            <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" priority />
           </Link>
         </div>
 
@@ -132,24 +133,35 @@ export default function Navbar() {
               className="w-[300px] sm:w-[400px] border-l border-border bg-background/95 backdrop-blur-xl"
             >
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <nav className="flex flex-col gap-6 mt-12">
-                {navigation.map((item) => (
-                  item.dropdown ? (
-                    <div key={item.key} className="flex flex-col gap-3">
-                      <div className="text-base md:text-lg font-medium text-foreground">
-                        {item.label || t(item.key)}
+              <nav className="flex flex-col gap-2 mt-8 overflow-y-auto pb-8">
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href || (item.dropdown && pathname.startsWith("/products"));
+                  const Icon = item.icon;
+                  return item.dropdown ? (
+                    <div key={item.key} className="flex flex-col gap-1">
+                      <div className={`px-4 py-3 rounded-xl text-base font-semibold transition-all flex items-center justify-between cursor-pointer ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:bg-secondary/50'}`}>
+                        <div className="flex items-center gap-3">
+                          <Icon className={`w-5 h-5 ${isActive ? 'text-primary' : 'text-muted-foreground'}`} />
+                          {item.label || t(item.key)}
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${isActive ? 'rotate-180 text-primary' : 'opacity-50'}`} />
                       </div>
-                      <div className="flex flex-col pl-4 gap-3 border-l-2 border-border/50">
-                        {item.dropdown.map((dropItem, idx) => (
-                          <Link
-                            key={idx}
-                            href={dropItem.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="text-sm md:text-base font-medium text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            {dropItem.label}
-                          </Link>
-                        ))}
+                      <div className="flex flex-col pl-4 mt-1 gap-1 border-l-2 border-border/50 ml-6">
+                        {item.dropdown.map((dropItem, idx) => {
+                          const isDropActive = pathname === dropItem.href;
+                          const DropIcon = dropItem.icon;
+                          return (
+                            <Link
+                              key={idx}
+                              href={dropItem.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${isDropActive ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:text-primary hover:bg-secondary/50'}`}
+                            >
+                              <DropIcon className={`w-4 h-4 ${isDropActive ? 'text-primary' : 'opacity-70'}`} />
+                              {dropItem.label}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   ) : (
@@ -157,18 +169,21 @@ export default function Navbar() {
                       key={item.key}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-base md:text-lg font-medium transition-colors hover:text-primary ${
-                        pathname === item.href ? "text-foreground" : "text-muted-foreground"
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl text-base font-semibold transition-all ${
+                        pathname === item.href ? "bg-primary/10 text-primary" : "text-foreground hover:bg-secondary/50 hover:text-primary"
                       }`}
                     >
+                      <Icon className={`w-5 h-5 ${pathname === item.href ? 'text-primary' : 'text-muted-foreground'}`} />
                       {t(item.key)}
                     </Link>
                   )
-                ))}
+                })}
 
-                <Button onClick={() => { setIsMobileMenuOpen(false); openStartProject(); }} className="bg-gradient-to-r from-primary to-[#D95D1A] text-white w-full rounded-xl h-12 text-sm md:text-base font-semibold">
-                  Start Project
-                </Button>
+                <div className="mt-6 pt-6 border-t border-border">
+                  <Button onClick={() => { setIsMobileMenuOpen(false); openStartProject(); }} className="bg-gradient-to-r from-primary to-[#D95D1A] text-white w-full rounded-xl h-14 text-base font-semibold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+                    Start Project
+                  </Button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
