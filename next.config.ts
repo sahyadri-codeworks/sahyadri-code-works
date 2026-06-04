@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/sahyadri-code-works" : "",
-  assetPrefix: isProd ? "/sahyadri-code-works/" : "",
+  basePath: isProd ? "/sahyadri-code-works" : undefined,
+  assetPrefix: isProd ? "/sahyadri-code-works/" : undefined,
 };
 
 export default nextConfig;

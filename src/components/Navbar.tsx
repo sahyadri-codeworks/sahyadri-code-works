@@ -129,11 +129,14 @@ export default function Navbar() {
             </SheetTrigger>
 
             <SheetContent
-              side="right"
-              className="w-[300px] sm:w-[400px] border-l border-border bg-background/95 backdrop-blur-xl"
+              side="left"
+              className="w-[85vw] max-w-[400px] border-r border-border bg-background/95 backdrop-blur-xl p-6 flex flex-col shadow-2xl"
             >
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <nav className="flex flex-col gap-2 mt-8 overflow-y-auto pb-8">
+              <div className="flex items-center gap-2 mb-8 mt-2">
+                <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={150} height={150} className="object-contain h-[50px] w-auto" />
+              </div>
+              <nav className="flex flex-col gap-2 overflow-y-auto pb-8 flex-1">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href || (item.dropdown && pathname.startsWith("/products"));
                   const Icon = item.icon;
