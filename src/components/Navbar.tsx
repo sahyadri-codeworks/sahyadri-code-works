@@ -60,7 +60,7 @@ export default function Navbar() {
       <div className="container flex h-[120px] max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" loading="eager" priority />
+            <Image src={`${process.env.NODE_ENV === 'production' ? '/sahyadri-code-works' : ''}/logo-new-sw-3.png`} alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" loading="eager" priority />
           </Link>
         </div>
 
@@ -134,7 +134,7 @@ export default function Navbar() {
             >
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex items-center gap-2 mb-8 mt-2">
-                <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={150} height={150} className="object-contain h-[50px] w-auto" />
+                <Image src={`${process.env.NODE_ENV === 'production' ? '/sahyadri-code-works' : ''}/logo-new-sw-3.png`} alt="Sahyadri Code Works Logo" width={150} height={150} className="object-contain h-[50px] w-auto" />
               </div>
               <nav className="flex flex-col gap-2 overflow-y-auto pb-8 flex-1">
                 {navigation.map((item) => {
