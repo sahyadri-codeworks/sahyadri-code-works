@@ -155,13 +155,13 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex-1 p-6 font-mono text-sm leading-relaxed overflow-hidden bg-[#181312] text-[#E2D5CD]">
-                      <div><span className="text-[#FF7B72]">import</span> <span className="text-white">React</span> <span className="text-[#FF7B72]">from</span> <span className="text-[#A5D6FF]">'react'</span>;</div>
-                      <div className="text-[#8B949E] mt-2">// Click values to configure live deployments:</div>
+                      <div><span className="text-[#FF7B72]">import</span> <span className="text-white">React</span> <span className="text-[#FF7B72]">from</span> <span className="text-[#A5D6FF]">&apos;react&apos;</span>;</div>
+                      <div className="text-[#8B949E] mt-2">{`// Click values to configure live deployments:`}</div>
                       <div><span className="text-[#FF7B72]">const</span> <span className="text-[#D2A8FF]">SahyadriApp</span> <span className="text-[#FF7B72]">=</span> () <span className="text-[#FF7B72]">=&gt;</span> {"{"}</div>
-                      <div className="ml-4"><span className="text-[#FF7B72]">const</span> devTeam = <span className="text-[#7EE787] underline decoration-dashed underline-offset-4 cursor-pointer">"Expert Engineers"</span>;</div>
+                      <div className="ml-4"><span className="text-[#FF7B72]">const</span> devTeam = <span className="text-[#7EE787] underline decoration-dashed underline-offset-4 cursor-pointer">&quot;Expert Engineers&quot;</span>;</div>
                       <div className="ml-4"><span className="text-[#FF7B72]">const</span> scale = <span className="text-[#79C0FF] underline decoration-dashed underline-offset-4 cursor-pointer">50</span>;</div>
                       <div className="ml-4 mt-2"><span className="text-[#FF7B72]">return</span> (</div>
-                      <div className="ml-8"><span className="text-[#7EE787]">&lt;CloudServer</span> <span className="text-[#79C0FF]">deploy</span>=<span className="text-[#A5D6FF]">"always-on"</span><span className="text-[#7EE787]">&gt;</span></div>
+                      <div className="ml-8"><span className="text-[#7EE787]">&lt;CloudServer</span> <span className="text-[#79C0FF]">deploy</span>=<span className="text-[#A5D6FF]">&quot;always-on&quot;</span><span className="text-[#7EE787]">&gt;</span></div>
                       <div className="ml-12"><span className="text-[#7EE787]">&lt;WebApp</span> <span className="text-[#79C0FF]">metrics</span>={"{"}scale{"}"} <span className="text-[#79C0FF]">team</span>={"{"}devTeam{"}"}</div>
                       <div className="ml-12"><span className="text-[#7EE787]">/&gt;</span></div>
                       <div className="ml-8"><span className="text-[#7EE787]">&lt;/CloudServer&gt;</span></div>
@@ -181,9 +181,9 @@ export default function Home() {
                         </Button>
                       </div>
                       <div className="text-[#8B949E] leading-[1.6]">
-                        // Welcome to Sahyadri Interactive Sandbox<br />
-                        // Click the underlined green/orange variable tokens to customize.<br />
-                        // Then click 'RUN PROGRAM' to deploy and see output logs.
+                        {`// Welcome to Sahyadri Interactive Sandbox`}<br />
+                        {`// Click the underlined green/orange variable tokens to customize.`}<br />
+                        {`// Then click 'RUN PROGRAM' to deploy and see output logs.`}
                       </div>
                     </div>
                   </div>
@@ -386,7 +386,7 @@ export default function Home() {
                 {/* Bottom Quote */}
                 <div className="absolute bottom-6 left-8 right-8">
                   <p className="text-white/90 text-sm md:text-base italic font-serif leading-[1.6]">
-                    "We named ourselves after the Sahyadri mountains. Steady, enduring, and committed."
+                    &quot;We named ourselves after the Sahyadri mountains. Steady, enduring, and committed.&quot;
                   </p>
                 </div>
               </div>
@@ -407,7 +407,7 @@ export default function Home() {
               Let’s Build Something <br className="hidden md:block" /> <span className="italic text-white/10 tracking-widest block mt-2">Extraordinary</span>
             </h2>
             <p className="text-white/60 text-base md:text-lg leading-[1.6] max-w-3xl mx-auto mb-12">
-              Ready to elevate your brand's digital presence? Partner with us to craft scalable, premium solutions tailored just for you.
+              Ready to elevate your brand&apos;s digital presence? Partner with us to craft scalable, premium solutions tailored just for you.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <StartProjectButton size="lg" className="bg-[#1A1310] text-white hover:bg-[#2C211A] border border-white/5 rounded-xl px-8 h-12 text-sm md:text-base font-semibold transition-all shadow-[0_0_40px_rgba(232,106,31,0.25)]">
@@ -544,7 +544,7 @@ export default function Home() {
                     <span className="text-[11px] font-bold text-muted-foreground font-mono uppercase tracking-wider">Google Review</span>
                   </div>
                   <p className={`text-muted-foreground text-[15px] italic leading-relaxed flex-grow ${review.name ? 'mb-8' : ''}`}>
-                    "{review.text}"
+                    &quot;{review.text}&quot;
                   </p>
                   {review.name && (
                     <div className="flex items-center gap-4 pt-6 border-t border-border/50 mt-auto">

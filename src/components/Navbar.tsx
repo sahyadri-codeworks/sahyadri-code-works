@@ -59,7 +59,7 @@ export default function Navbar() {
       <div className="container flex h-[120px] max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" priority />
+            <Image src="/sahyadri-code-works/logo-new-sw-3.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" priority />
           </Link>
         </div>
 
