@@ -2,7 +2,7 @@
   "name": "sahyadri-code",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sahyadri-codeworks.github.io/sahyadricodeworks",
+  "homepage": "https://sahyadri-codeworks.github.io/sahyadri-code-works",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
