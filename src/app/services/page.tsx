@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Check, ArrowRight, Code2, Layout, Database, Shield, MonitorSmartphone, Server, Globe, LayoutDashboard, Search, Smartphone } from "lucide-react";
+import { Check, ArrowRight, Code2, Layout, Database, Shield, MonitorSmartphone, Server, Globe, LayoutDashboard, Search, Smartphone, Bot, Palette } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import StartProjectButton from "@/components/StartProjectButton";
@@ -31,7 +31,7 @@ const servicesList = [
   },
   {
     id: "invoice-tools",
-    title: "Invoice & Challan Tools",
+    title: "Business Operations Tools",
     icon: Search,
     description: "Automated billing and invoicing solutions designed for seamless financial management.",
     features: ["Automated Invoicing", "Tax Calculation", "Payment Tracking", "PDF Generation"],
@@ -52,6 +52,22 @@ const servicesList = [
     description: "Comprehensive security testing to identify and eliminate vulnerabilities in your systems.",
     features: ["Penetration Testing", "Vulnerability Assessment", "Code Review", "Security Reports"],
     tech: ["Burp Suite", "OWASP ZAP", "Nmap"],
+  },
+  {
+    id: "ai-automation",
+    title: "AI and Automation",
+    icon: Bot,
+    description: "Intelligent automation and AI-driven solutions to optimize your business processes and reduce manual workloads.",
+    features: ["Process Automation", "Custom AI Models", "Chatbot Integration", "Workflow Optimization"],
+    tech: ["Python", "OpenAI", "LangChain"],
+  },
+  {
+    id: "ui-ux-design",
+    title: "UI/UX Design",
+    icon: Palette,
+    description: "Creating intuitive, engaging, and aesthetically pleasing user interfaces that offer seamless digital experiences.",
+    features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Usability Testing"],
+    tech: ["Figma", "Adobe XD", "Framer"],
   },
 ];
 

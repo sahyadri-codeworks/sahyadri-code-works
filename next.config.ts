@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/sahyadri-code-works" : undefined,
-  assetPrefix: isProd ? "/sahyadri-code-works/" : undefined,
+  basePath: isProd && !process.env.CF_PAGES ? "/sahyadri-code-works" : undefined,
+  assetPrefix: isProd && !process.env.CF_PAGES ? "/sahyadri-code-works/" : undefined,
 };
 
 export default nextConfig;

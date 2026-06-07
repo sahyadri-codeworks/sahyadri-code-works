@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Brand & Info */}
           <div className="flex flex-col gap-4 lg:col-span-2 lg:pr-8">
             <Link href="/" className="flex items-center gap-4 w-fit group">
-              <div className="bg-white rounded-xl flex items-center justify-center p-2 shadow-sm shrink-0 w-20 h-16 md:w-24 md:h-20 overflow-hidden relative">
-                <Image src={`${process.env.NODE_ENV === 'production' ? '/sahyadri-code-works' : ''}/logo-new-sw-3.png`} alt="Sahyadri Code Works Logo" width={300} height={300} className="object-cover object-top absolute top-2 w-[90%] h-auto" loading="eager" priority />
+              <div className="bg-white rounded-xl flex items-center justify-center p-1 md:p-2 shadow-sm shrink-0 w-20 h-14 md:w-24 md:h-16 overflow-hidden">
+                <Image src="/SWC_LOG-remove.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain w-full h-full scale-[1.3] md:scale-[1.4]" loading="eager" priority />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col font-orbitron">
                 <span className="text-xl md:text-2xl font-black text-white tracking-[0.15em] leading-none group-hover:text-[#F18430] transition-colors">SAHYADRI</span>
                 <span className="text-xs md:text-sm font-bold text-[#F18430] tracking-[0.2em] mt-1">CODE WORKS</span>
               </div>
@@ -43,9 +43,11 @@ export default function Footer() {
               <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Website Development</Link></li>
               <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Web App Development</Link></li>
               <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">CRM Systems</Link></li>
-              <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Invoice Tools</Link></li>
+              <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Business Operations Tools</Link></li>
               <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Social Media</Link></li>
               <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Bug Hunting</Link></li>
+              <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">AI & Automation</Link></li>
+              <li><Link href="/services" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">UI/UX Design</Link></li>
             </ul>
           </div>
 
@@ -63,7 +65,6 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-[#F7F2EC] tracking-widest uppercase mb-4">Company</h3>
             <ul className="flex flex-col gap-[10px]">
               <li><Link href="/about" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/projects" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Projects</Link></li>
               <li><Link href="/about" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Why Us</Link></li>
               <li><Link href="/careers" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Careers</Link></li>
               <li><Link href="/contact" className="text-[#B8A999] hover:text-[#F7F2EC] transition-colors text-sm">Contact</Link></li>

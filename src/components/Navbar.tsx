@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, Home, Briefcase, Box, Info, FolderGit2, GraduationCap, PhoneCall, Sparkles } from "lucide-react";
+import { Menu, ChevronDown, Home, Briefcase, Box, Info, GraduationCap, PhoneCall, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -28,7 +28,6 @@ const navigation = [
     ]
   },
   { key: "nav.about", href: "/about", icon: Info },
-  { key: "nav.projects", href: "/projects", icon: FolderGit2 },
   { key: "nav.careers", href: "/careers", icon: GraduationCap },
   { key: "nav.contact", href: "/contact", icon: PhoneCall },
 ];
@@ -59,8 +58,12 @@ export default function Navbar() {
     >
       <div className="container flex h-[120px] max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src={`${process.env.NODE_ENV === 'production' ? '/sahyadri-code-works' : ''}/logo-new-sw-3.png`} alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto" loading="eager" priority />
+          <Link href="/" className="flex items-center gap-3 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
+            <Image src="/SWC_LOG-remove.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto drop-shadow-md scale-[1.5] ml-4 md:ml-6" loading="eager" priority />
+            <div className="flex flex-col font-orbitron">
+              <span className="text-xl font-black text-foreground tracking-[0.15em] leading-none group-hover:text-primary transition-colors">SAHYADRI</span>
+              <span className="text-xs font-bold text-primary tracking-[0.2em] mt-1">CODE WORKS</span>
+            </div>
           </Link>
         </div>
 
@@ -133,8 +136,12 @@ export default function Navbar() {
               className="w-[85vw] max-w-[400px] border-r border-border bg-background/95 backdrop-blur-xl p-6 flex flex-col shadow-2xl"
             >
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <div className="flex items-center gap-2 mb-8 mt-2">
-                <Image src={`${process.env.NODE_ENV === 'production' ? '/sahyadri-code-works' : ''}/logo-new-sw-3.png`} alt="Sahyadri Code Works Logo" width={150} height={150} className="object-contain h-[50px] w-auto" />
+              <div className="flex items-center gap-3 mb-8 mt-2">
+                <Image src="/SWC_LOG-remove.png" alt="Sahyadri Code Works Logo" width={150} height={150} className="object-contain h-[50px] w-auto drop-shadow-sm scale-[1.5] ml-2" />
+                <div className="flex flex-col font-orbitron">
+                  <span className="text-lg font-black text-foreground tracking-[0.15em] leading-none">SAHYADRI</span>
+                  <span className="text-[10px] font-bold text-primary tracking-[0.2em] mt-1">CODE WORKS</span>
+                </div>
               </div>
               <nav className="flex flex-col gap-2 overflow-y-auto pb-8 flex-1">
                 {navigation.map((item) => {

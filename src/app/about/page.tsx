@@ -37,18 +37,11 @@ export default function AboutPage() {
             {/* Right Content - Stats Grid */}
             <FadeIn direction="left" delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#241710] border border-white/5 rounded-[24px] p-8 md:p-10 flex flex-col justify-center transition-colors hover:bg-[#2C1D14]">
-                  <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-3">
-                    4<span className="text-[#E86A1F]">+</span>
-                  </div>
-                  <div className="text-white/50 text-xs font-bold tracking-widest uppercase">
-                    Active Projects
-                  </div>
-                </div>
+
 
                 <div className="bg-[#241710] border border-white/5 rounded-[24px] p-8 md:p-10 flex flex-col justify-center transition-colors hover:bg-[#2C1D14]">
                   <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-3">
-                    6<span className="text-[#E86A1F]">+</span>
+                    8<span className="text-[#E86A1F]">+</span>
                   </div>
                   <div className="text-white/50 text-xs font-bold tracking-widest uppercase">
                     Services
@@ -60,7 +53,7 @@ export default function AboutPage() {
                     15<span className="text-[#E86A1F]">+</span>
                   </div>
                   <div className="text-white/50 text-xs font-bold tracking-widest uppercase">
-                    Websites Delivered
+                    Projects Delivered
                   </div>
                 </div>
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Code2, Globe, LayoutDashboard, Search, Shield, Smartphone, CheckCircle2, ChevronRight, Star, BarChart3, TrendingUp, Users, Folder, Play, ShieldCheck, Code, LineChart } from "lucide-react";
+import { ArrowRight, Code2, Globe, LayoutDashboard, Search, Shield, Smartphone, CheckCircle2, ChevronRight, Star, BarChart3, TrendingUp, Users, Folder, Play, ShieldCheck, Code, LineChart, Bot, Palette } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,7 +24,7 @@ const services = [
   },
   {
     icon: Search,
-    title: "Invoice & Challan Tools",
+    title: "Business Operations Tools",
     description: "Automated billing and invoicing solutions designed for seamless financial management.",
   },
   {
@@ -36,6 +36,16 @@ const services = [
     icon: Shield,
     title: "Bug Hunting",
     description: "Comprehensive security testing to identify and eliminate vulnerabilities in your systems.",
+  },
+  {
+    icon: Bot,
+    title: "AI and Automation",
+    description: "Intelligent automation and AI-driven solutions to optimize your business processes and reduce manual workloads.",
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    description: "Creating intuitive, engaging, and aesthetically pleasing user interfaces that offer seamless digital experiences.",
   },
 ];
 
@@ -202,8 +212,8 @@ export default function Home() {
             <div key={i} className="flex items-center">
               {[
                 "Website Development", "Web App Development", "CRM Systems",
-                "Invoice & Challan Tools", "Social Media Management", "Bug Hunting & QA",
-                "Maharashtra, India", "WhatsApp AI Campaigns"
+                "Business Operations Tools", "Social Media Management", "Bug Hunting & QA",
+                "AI and Automation", "UI/UX Design", "Maharashtra, India", "WhatsApp AI Campaigns"
               ].map((item, j) => (
                 <div key={j} className="flex items-center">
                   <span className="text-[#B88663] text-sm md:text-base font-semibold tracking-widest uppercase font-mono px-8">{item}</span>

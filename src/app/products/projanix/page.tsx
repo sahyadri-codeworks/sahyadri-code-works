@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Sparkles, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -20,11 +21,9 @@ export default function ProjanixPage() {
             <span className="text-[11px] font-bold tracking-widest text-[#E86A1F] uppercase mb-6 block">
               — FLAGSHIP PROJECT MANAGEMENT HUB
             </span>
-            
             <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
-              <div className="w-16 h-16 bg-white rounded-2xl flex flex-col items-center justify-center p-1 shadow-md shrink-0 border border-black/5">
-                <span className="text-blue-600 font-bold text-3xl leading-none">P</span>
-                <span className="text-[10px] font-bold text-gray-800 leading-none mt-1">Projanix</span>
+              <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center shadow-md shrink-0 border border-black/5 overflow-hidden p-2">
+                <Image src="/Projanix.png" alt="Projanix Logo" width={120} height={120} className="w-full h-full object-contain" />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground tracking-tight">
                 Automate Sprints with <span className="text-[#D95D1A]">Projanix</span>
