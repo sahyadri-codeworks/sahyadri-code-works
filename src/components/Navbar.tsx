@@ -59,7 +59,7 @@ export default function Navbar() {
       <div className="container flex h-[120px] max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-3 group shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-            <Image src="/SWC_LOG-remove.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto drop-shadow-md scale-[1.5] ml-4 md:ml-6" loading="eager" priority />
+            <Image src="/SWC_LOG-remove.png" alt="Sahyadri Code Works Logo" width={300} height={300} className="object-contain h-[80px] w-auto drop-shadow-md scale-[1.5] ml-4 lg:ml-6" loading="eager" priority />
             <div className="flex flex-col font-orbitron">
               <span className="text-xl font-black text-foreground tracking-[0.15em] leading-none group-hover:text-primary transition-colors">SAHYADRI</span>
               <span className="text-xs font-bold text-primary tracking-[0.2em] mt-1">CODE WORKS</span>
@@ -67,12 +67,12 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navigation.map((item) => (
             item.dropdown ? (
               <div key={item.key} className="relative group">
                 <button
-                  className={`flex items-center gap-1 text-sm md:text-base font-semibold transition-colors hover:text-primary ${
+                  className={`flex items-center gap-1 text-sm lg:text-base font-semibold transition-colors hover:text-primary ${
                     pathname.startsWith("/products")
                       ? "text-foreground"
                       : "text-muted-foreground"
@@ -99,7 +99,7 @@ export default function Navbar() {
               <Link
                 key={item.key}
                 href={item.href}
-                className={`text-sm md:text-base font-semibold transition-colors hover:text-primary ${
+                className={`text-sm lg:text-base font-semibold transition-colors hover:text-primary ${
                   pathname === item.href
                     ? "text-foreground"
                     : "text-muted-foreground"
@@ -113,7 +113,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
 
-          <Button onClick={openStartProject} className="hidden md:flex bg-gradient-to-r from-primary to-[#D95D1A] hover:opacity-90 text-white border-0 shadow-[0_4px_14px_rgba(232,106,31,0.3)] transition-all duration-300 hover:-translate-y-0.5 rounded-xl h-12 px-8 text-sm md:text-base font-semibold">
+          <Button onClick={openStartProject} className="hidden lg:flex bg-gradient-to-r from-primary to-[#D95D1A] hover:opacity-90 text-white border-0 shadow-[0_4px_14px_rgba(232,106,31,0.3)] transition-all duration-300 hover:-translate-y-0.5 rounded-xl h-12 px-6 xl:px-8 text-sm lg:text-base font-semibold">
             Start Project
           </Button>
 
@@ -123,7 +123,7 @@ export default function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="md:hidden text-foreground hover:bg-muted"
+                  className="lg:hidden text-foreground hover:bg-muted"
                 />
               }
             >
